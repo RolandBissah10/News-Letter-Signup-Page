@@ -1,0 +1,259 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: hsl(235, 18%, 26%);
+    color: hsl(234, 29%, 20%);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= CARD ================= */
+.card {
+    background-color: #fff;
+    border-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    max-width: 920px;
+    width: 100%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card.hidden {
+    display: none;
+}
+
+/* ================= CONTENT ================= */
+.content {
+    padding: 70px 60px 70px 40px;
+    flex: 1;
+}
+
+h1 {
+    font-size: 56px;
+    margin-bottom: 24px;
+    line-height: 1;
+}
+
+.description {
+    margin-bottom: 26px;
+}
+
+.features {
+    margin-bottom: 40px;
+}
+
+.feature-item {
+    display: flex;
+    margin-bottom: 14px;
+}
+
+.check-icon {
+    width: 21px;
+    height: 21px;
+    background-color: hsl(4, 100%, 67%);
+    border-radius: 50%;
+    margin-right: 16px;
+    position: relative;
+}
+
+.check-icon::after {
+    content: "✓";
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================= FORM ================= */
+.form-group {
+    margin-bottom: 26px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.error-message {
+    font-size: 12px;
+    font-weight: 700;
+    color: hsl(4, 100%, 67%);
+    opacity: 0;
+}
+
+.error-message.show {
+    opacity: 1;
+}
+
+input {
+    width: 100%;
+    padding: 18px 24px;
+    border-radius: 8px;
+    border: 1px solid hsl(231, 7%, 60%);
+}
+
+input.error {
+    border-color: hsl(4, 100%, 67%);
+    background-color: rgba(255, 98, 87, 0.15);
+    color: hsl(4, 100%, 67%);
+}
+
+button {
+    width: 100%;
+    padding: 18px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    background-color: hsl(234, 29%, 20%);
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(4, 100%, 67%);;
+}
+
+/* ================= IMAGE ================= */
+.illustration {
+    flex: 1;
+    padding: 20px;
+}
+
+.desktop-img {
+    width: 100%;
+}
+
+.mobile-img {
+    display: none;
+}
+
+/* ================= SUCCESS MESSAGE ================= */
+.success-message {
+    background-color: #fff;
+    border-radius: 32px;
+    padding: 60px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.success-message.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.success-icon {
+    width: 64px;
+    height: 64px;
+    background-color: hsl(4, 100%, 67%);
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.success-icon::after {
+    content: "✓";
+    color: white;
+    font-size: 32px;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    body {
+        background-color: #fff;
+        padding: 0;
+        display: block;
+    }
+
+    .container {
+        min-height: 100vh;
+    }
+
+    .card {
+        flex-direction: column-reverse;
+        border-radius: 0;
+        box-shadow: none;
+        min-height: 100vh;
+    }
+
+    .illustration {
+        padding: 0;
+    }
+
+    .desktop-img {
+        display: none;
+    }
+
+    .mobile-img {
+        display: block;
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .content {
+        padding: 40px 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .success-message {
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 40px 24px;
+    }
+
+.success-message button {
+    margin-top: auto;
+}
+
+}
+
+/* ================= SMALL SCREENS ================= */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .mobile-img {
+        max-height: 250px;
+    }
+}
