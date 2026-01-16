@@ -75,7 +75,16 @@ h1 {
     position: relative;
 }
 
-
+.check-icon::after {
+    content: "✓";
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* ================= FORM ================= */
 .form-group {
@@ -140,7 +149,6 @@ button:hover {
 
 .desktop-img {
     width: 100%;
-    
 }
 
 .mobile-img {
@@ -164,11 +172,25 @@ button:hover {
     justify-content: center;
 }
 
-.desktop-icon{
-        margin-bottom:20px
-    }
+.success-icon {
+    width: 64px;
+    height: 64px;
+    background-color: hsl(4, 100%, 67%);
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+}
 
-
+.success-icon::after {
+    content: "✓";
+    color: white;
+    font-size: 32px;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
@@ -202,8 +224,8 @@ button:hover {
         width: 100%;
         max-height: 300px;
         object-fit: cover;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 
     .content {
@@ -214,18 +236,11 @@ button:hover {
         font-size: 40px;
     }
 
-    .mobile-icon{
-        margin-bottom:20px
-    }
-
     .success-message {
         min-height: 100vh;
-        min-width:fit-content;
         border-radius: 0;
         padding: 40px 24px;
     }
-
-    
 
 .success-message button {
     margin-top: auto;
@@ -244,3 +259,22 @@ button:hover {
     }
 }
 
+.ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.ul li {
+    display: flex;
+    padding-left: 0px;
+    position: relative;
+    margin-bottom: 15px;
+    gap: 12px;
+}
+
+.ul li img {
+    flex-shrink: 0;
+    width: 21px;
+    height: 21px;
+}
