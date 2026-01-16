@@ -58,6 +58,7 @@ h1 {
 
 .features {
     margin-bottom: 40px;
+    line-height: 1.5;
 }
 
 .feature-item {
@@ -256,4 +257,24 @@ button:hover {
     .mobile-img {
         max-height: 250px;
     }
+}
+
+.ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.ul li {
+    display: flex;
+    padding-left: 0px;
+    position: relative;
+    margin-bottom: 15px;
+    gap: 12px;
+}
+
+.ul li img {
+    flex-shrink: 0;
+    width: 21px;
+    height: 21px;
 }
